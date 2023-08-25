@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #dddddd;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    width: 400px;
+    margin: 350px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(21, 20, 20, 0.02);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.24);
+}
+
+.container-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 10px;
+    align-items: center;
+}
+
+input{
+    width: 15rem;
+    height: 25px;
+    border: none;
+    border-radius: 9px;
+    text-align: center;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0 10px 0;
+    color: #000000;
+    font-family: 'Space Grotesk', sans-serif;
+    border-bottom: 1px solid #252525;
+}
+
+#addTask {
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #105a00;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.deleteTask {
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: #ff1900;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
