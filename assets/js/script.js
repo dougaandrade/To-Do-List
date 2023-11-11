@@ -2,6 +2,7 @@ const taskInput = document.getElementById('taskInput');
 const addTaskButton = document.getElementById('addTask');
 const taskList = document.getElementById('taskList');
 const tarefa = document.getElementsByClassName('tarefa_text')
+const botaoConcluido = document.getElementById('int')
 
 
 addTaskButton.addEventListener('click', () => {
@@ -28,9 +29,13 @@ addTaskButton.addEventListener('click', () => {
         taskItem.innerHTML = `
         ${taskText}
         <div class="data">${relogio()}</div>
-        <div class="btn"><button class="deleteTask"><ion-icon name="close-outline"></ion-icon></button></div>`;
+        <div class="btn"><button class="deleteTask"><ion-icon name="checkmark-outline"></ion-icon></button></div>`;
+        
+        Tincluida('Tarefa Incluida')
+
         return taskItem;
     }
+
 
     function relogio() {
         const dataAtual = new Date();
@@ -61,6 +66,28 @@ addTaskButton.addEventListener('click', () => {
         })
 
     }
+
+
+    function Tincluida(Tincluida){
+        const Toast1 = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 4000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+                toast.addEventListener('mouseenter', Swal.stopTimer)
+                toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+        })
+
+        Toast1.fire({
+            icon: 'success',
+            title: Tincluida,
+        })
+    }
+    
+
 
     function TRealizada(mensagemR){
         const Toast1 = Swal.mixin({
